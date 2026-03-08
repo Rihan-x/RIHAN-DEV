@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#00f5ff">
+    <meta name="description" content="SHEIKH RIHAN - Pro Free Fire Player, YouTuber & Content Creator from Bangladesh">
+    <meta name="author" content="Sheikh Rihan">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/t5JGk7f/Snap-Insta-to-571796753-17887536921380207-8356689842133979325-n.jpg">
+    <title>SHEIKH RIHAN | Pro Gamer ⚡</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /*==========================================
+          SHEIKH RIHAN V10.2 - NO SHAKE EDITION
+          Fixed Mobile Menu | Premium Back to Top
+        ==========================================*/
+        
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        
+        :root{
+            --cyan:#00f5ff;--cyan-glow:rgba(0,245,255,0.4);
+            --magenta:#ff00ff;--magenta-glow:rgba(255,0,255,0.35);
+            --gold:#ffd700;--gold-glow:rgba(255,215,0,0.35);
+            --lime:#00ff88;--lime-glow:rgba(0,255,136,0.35);
+            --red:#ff0050;--orange:#ff6600;
+            --yt-red:#ff0033;--spotify:#1ed760;--fb:#1877f2;
+            --ig:#e4405f;--discord:#5865f2;--tg:#0088cc;--wa:#25d366;
+            --bg:#030308;--bg-2:#08081a;--bg-card:rgba(8,8,26,0.95);
+            --glass:rgba(0,245,255,0.02);--glass-border:rgba(0,245,255,0.1);
+            --text:#fff;--text-soft:rgba(255,255,255,0.8);--text-dim:rgba(255,255,255,0.5);
+            --radius:12px;--radius-lg:18px;--radius-xl:24px;--radius-full:9999px;
+            --font-display:'Orbitron',sans-serif;
+            --font-body:'Inter',-apple-system,sans-serif;
+            --font-accent:'Rajdhani',sans-serif;
+            --safe-bottom:env(safe-area-inset-bottom,0px);
+            --safe-left:env(safe-area-inset-left,0px);
+        }
+        
+        [data-theme="light"]{
+            --bg:#f8faff;--bg-2:#eef2ff;--bg-card:rgba(255,255,255,0.95);
+            --glass:rgba(0,100,200,0.03);--glass-border:rgba(0,100,200,0.12);
+            --text:#050515;--text-soft:rgba(5,5,21,0.8);--text-dim:rgba(5,5,21,0.5);
+            --cyan:#0099cc;--magenta:#cc00aa;
+        }
+        
+        html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+        
+        body{font-family:var(--font-body);font-weight:400;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;overflow-x:hidden;letter-spacing:0.01em}
+        body.locked{overflow:hidden;position:fixed;width:100%;height:100%}
+        
+        ::-webkit-scrollbar{width:6px}
+        ::-webkit-scrollbar-track{background:var(--bg-2)}
+        ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--cyan),var(--magenta));border-radius:10px}
+        ::selection{background:var(--cyan);color:#000}
+        img{max-width:100%;height:auto;display:block}
+        
+        /* Background */
+        .bg-fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+        .bg-fx::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 10% 10%,rgba(0,245,255,0.06),transparent 50%),radial-gradient(ellipse 50% 35% at 90% 90%,rgba(255,0,255,0.05),transparent 50%)}
+        .bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,245,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,255,0.02) 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent)}
+        
+        /* Premium Loader */
+        .loader-screen{position:fixed;inset:0;z-index:99999;background:linear-gradient(135deg,#030308 0%,#0a0a25 50%,#030308 100%);display:flex;align-items:center;justify-content:center;transition:opacity 0.6s,visibility 0.6s}
+        .loader-screen.hidden{opacity:0;visibility:hidden;pointer-events:none}
+        .loader-content{text-align:center;max-width:400px;padding:20px}
+        
+        .loader-avatar-wrap{position:relative;width:150px;height:150px;margin:0 auto 35px}
+        .loader-ring-outer{position:absolute;inset:-10px;border-radius:50%;background:conic-gradient(from 0deg,var(--cyan),var(--magenta),var(--lime),var(--gold),var(--cyan));animation:loaderSpin 2s linear infinite;padding:3px}
+        .loader-ring-outer::before{content:'';position:absolute;inset:3px;background:#030308;border-radius:50%}
+        .loader-ring-mid{position:absolute;inset:2px;border-radius:50%;border:2px dashed rgba(0,245,255,0.3);animation:loaderSpin 3s linear infinite reverse}
+        .loader-glow{position:absolute;inset:15px;border-radius:50%;background:conic-gradient(from 0deg,var(--cyan-glow),var(--magenta-glow),var(--cyan-glow));filter:blur(20px);animation:loaderPulse 2s ease-in-out infinite}
+        .loader-avatar{position:absolute;inset:20px;border-radius:50%;overflow:hidden;border:3px solid var(--cyan);box-shadow:0 0 30px var(--cyan-glow)}
+        .loader-avatar img{width:100%;height:100%;object-fit:cover}
+        
+        @keyframes loaderSpin{to{transform:rotate(360deg)}}
+        @keyframes loaderPulse{0%,100%{opacity:0.4;transform:scale(1)}50%{opacity:0.7;transform:scale(1.05)}}
+        
+        .loader-title{font-family:var(--font-display);font-size:clamp(28px,8vw,42px);font-weight:800;letter-spacing:6px;margin-bottom:10px;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--lime));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:loaderGradient 3s ease infinite}
+        @keyframes loaderGradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+        .loader-subtitle{font-family:var(--font-display);font-size:11px;font-weight:600;color:var(--text-dim);letter-spacing:5px;margin-bottom:35px}
+        
+        .loader-progress-wrap{width:280px;margin:0 auto}
+        .loader-progress-track{height:4px;background:rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;position:relative}
+        .loader-progress-track::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent);animation:shimmerBar 2s infinite}
+        @keyframes shimmerBar{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+        .loader-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--magenta),var(--lime));background-size:200%;border-radius:10px;transition:width 0.15s;box-shadow:0 0 15px var(--cyan-glow)}
+        .loader-percent{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--cyan);margin-top:16px;letter-spacing:3px}
+        .loader-status{font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--text-dim);margin-top:12px}
+        .loader-dots{display:inline-flex;gap:4px;margin-left:4px}
+        .loader-dots span{width:4px;height:4px;background:var(--cyan);border-radius:50%;animation:dotBounce 1.4s ease-in-out infinite}
+        .loader-dots span:nth-child(1){animation-delay:0s}
+        .loader-dots span:nth-child(2){animation-delay:0.2s}
+        .loader-dots span:nth-child(3){animation-delay:0.4s}
+        @keyframes dotBounce{0%,80%,100%{transform:scale(0.6);opacity:0.4}40%{transform:scale(1);opacity:1}}
+        
+        /* Navigation */
+        .navbar{position:fixed;top:0;left:0;right:0;height:70px;z-index:1000;padding:0 max(20px,var(--safe-left));display:flex;align-items:center;justify-content:space-between;background:rgba(3,3,8,0.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border);transition:transform 0.3s,background 0.3s,height 0.3s}
+        .navbar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),var(--magenta),var(--cyan),transparent);opacity:0.4}
+        .navbar.scrolled{height:60px;background:rgba(3,3,8,0.98)}
+        .navbar.hidden{transform:translateY(-100%)}
+        
+        .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+        .logo-img{width:44px;height:44px;border-radius:var(--radius);object-fit:cover;border:2px solid var(--cyan);transition:box-shadow 0.3s}
+        .logo:hover .logo-img{box-shadow:0 0 20px var(--cyan-glow)}
+        .logo-text{display:flex;flex-direction:column}
+        .logo-name{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--cyan);letter-spacing:2px;line-height:1.2}
+        .logo-tag{font-family:var(--font-accent);font-size:10px;font-weight:600;color:var(--magenta);letter-spacing:2px}
+        @media(max-width:480px){.logo-text{display:none}}
+        
+        .nav-menu{display:none;gap:28px;list-style:none}
+        .nav-menu a{position:relative;color:var(--text-soft);text-decoration:none;font-family:var(--font-accent);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 0;transition:color 0.3s}
+        .nav-menu a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--magenta));border-radius:2px;transition:width 0.3s}
+        .nav-menu a:hover,.nav-menu a.active{color:var(--cyan)}
+        .nav-menu a:hover::after,.nav-menu a.active::after{width:100%}
+        @media(min-width:1080px){.nav-menu{display:flex}}
+        
+        .nav-actions{display:flex;align-items:center;gap:12px}
+        .theme-btn{display:none;width:42px;height:42px;border-radius:var(--radius);border:1px solid var(--glass-border);background:var(--glass);color:var(--cyan);font-size:16px;cursor:pointer;transition:all 0.3s}
+        .theme-btn:hover{background:rgba(0,245,255,0.1);border-color:var(--cyan)}
+        @media(min-width:1080px){.theme-btn{display:flex;align-items:center;justify-content:center}}
+        
+        .nav-cta{display:none;align-items:center;gap:8px;padding:10px 20px;background:linear-gradient(135deg,var(--yt-red),#cc0022);color:#fff;font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:1px;text-decoration:none;border-radius:var(--radius-full);transition:all 0.3s}
+        .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,0,51,0.4)}
+        @media(min-width:1080px){.nav-cta{display:flex}}
+        
+        /* Menu Toggle - NO SHAKE */
+        .menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:4px;-webkit-tap-highlight-color:transparent}
+        .menu-toggle span{display:block;width:100%;height:2px;background:linear-gradient(90deg,var(--cyan),var(--magenta));border-radius:2px;transition:transform 0.3s ease,opacity 0.3s ease;transform-origin:center;will-change:transform,opacity;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+        .menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+        .menu-toggle.active span:nth-child(2){opacity:0}
+        .menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+        @media(min-width:1080px){.menu-toggle{display:none}}
+        
+        /* Mobile Nav - NO SHAKE */
+        .mobile-nav{position:fixed;inset:0;z-index:999;background:rgba(3,3,8,0.98);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;opacity:0;visibility:hidden;transition:opacity 0.4s ease,visibility 0.4s ease;-webkit-transform:translateZ(0);transform:translateZ(0);will-change:opacity,visibility}
+        .mobile-nav.open{opacity:1;visibility:visible}
+        .mobile-nav a{color:var(--text);text-decoration:none;font-family:var(--font-display);font-size:16px;font-weight:600;letter-spacing:4px;padding:12px 24px;transition:color 0.3s ease;-webkit-tap-highlight-color:transparent;transform:translateZ(0)}
+        .mobile-nav a:hover{color:var(--cyan)}
+        .mobile-nav-social{display:flex;gap:12px;margin-top:40px}
+        .mobile-nav-social a{width:50px;height:50px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;padding:12px;transition:border-color 0.3s ease,background 0.3s ease;transform:translateZ(0)}
+        .mobile-nav-social a:hover{border-color:var(--cyan)}
+        .mobile-nav-social img{width:100%;height:100%;object-fit:contain}
+        
+        /* Utilities */
+        .container{max-width:1280px;margin:0 auto;padding:0 max(20px,var(--safe-left))}
+        .section{padding:100px 0}
+        @media(max-width:768px){.section{padding:75px 0}}
+        
+        .gradient-text{background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--lime));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        
+        .section-header{text-align:center;margin-bottom:55px}
+        .section-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;margin-bottom:16px;background:rgba(0,245,255,0.06);border:1px solid var(--glass-border);border-radius:var(--radius-full);font-family:var(--font-display);font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:2px}
+        .section-badge i{font-size:11px}
+        .section-badge img{width:16px;height:16px}
+        .section-title{font-family:var(--font-display);font-size:clamp(30px,8vw,54px);font-weight:800;letter-spacing:3px;margin-bottom:12px;line-height:1.1}
+        .section-desc{font-family:var(--font-body);font-size:clamp(15px,2.5vw,17px);font-weight:400;color:var(--text-soft);max-width:520px;margin:0 auto;line-height:1.8}
+        
+        /* Hero */
+        .hero{min-height:100vh;min-height:100dvh;display:flex;align-items:center;padding:100px 0 70px}
+        .hero-wrapper{display:flex;flex-direction:column;align-items:center;text-align:center;gap:55px;width:100%}
+        @media(min-width:1024px){.hero-wrapper{flex-direction:row;text-align:left}.hero-content{flex:1.2}.hero-visual{flex:1}}
+        .hero-content{max-width:620px}
+        @media(min-width:1024px){.hero-content{max-width:none}}
+        
+        .hero-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;margin-bottom:22px;background:rgba(0,245,255,0.06);border:1px solid rgba(0,245,255,0.2);border-radius:var(--radius-full);font-family:var(--font-display);font-size:10px;font-weight:700;color:var(--gold);letter-spacing:2px}
+        .status-dot{width:8px;height:8px;background:var(--lime);border-radius:50%;animation:dotPulse 2s ease-in-out infinite}
+        @keyframes dotPulse{0%,100%{opacity:1}50%{opacity:0.4}}
+        
+        .hero-title{font-family:var(--font-display);font-size:clamp(55px,15vw,100px);font-weight:900;line-height:0.95;letter-spacing:5px;margin-bottom:16px}
+        .hero-title .line-1{display:block;color:var(--text)}
+        .hero-title .line-2{display:block;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--lime),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        
+        .hero-subtitle{font-family:var(--font-accent);font-size:clamp(15px,3.5vw,19px);font-weight:600;color:var(--text-soft);letter-spacing:5px;margin-bottom:12px}
+        .hero-subtitle span{color:var(--cyan)}
+        
+        .hero-typing{min-height:32px;margin-bottom:16px}
+        .typing-text{font-family:var(--font-display);font-size:clamp(13px,3vw,16px);font-weight:600;color:var(--lime);letter-spacing:1px}
+        .typing-text::after{content:'|';color:var(--cyan);animation:cursorBlink 0.8s infinite;margin-left:3px}
+        @keyframes cursorBlink{0%,100%{opacity:1}50%{opacity:0}}
+        
+        .hero-desc{font-family:var(--font-body);font-size:clamp(14px,2.5vw,16px);font-weight:400;color:var(--text-soft);line-height:1.9;max-width:520px;margin:0 auto 24px}
+        @media(min-width:1024px){.hero-desc{margin:0 0 24px}}
+        
+        .hero-buttons{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
+        @media(min-width:1024px){.hero-buttons{justify-content:flex-start}}
+        
+        .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;min-height:52px;font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:1.5px;text-decoration:none;border-radius:var(--radius-full);border:none;cursor:pointer;transition:all 0.3s}
+        .btn-primary{background:linear-gradient(135deg,var(--cyan),var(--magenta));color:#000}
+        .btn-primary:hover{transform:translateY(-4px);box-shadow:0 15px 40px var(--cyan-glow)}
+        .btn-outline{background:transparent;color:var(--cyan);border:2px solid var(--cyan)}
+        .btn-outline:hover{background:var(--cyan);color:#000;transform:translateY(-4px)}
+        
+        .hero-socials{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+        @media(min-width:1024px){.hero-socials{justify-content:flex-start}}
+        .social-icon{width:50px;height:50px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;padding:12px;transition:all 0.3s}
+        .social-icon:hover{transform:translateY(-5px);border-color:var(--cyan);box-shadow:0 10px 30px rgba(0,245,255,0.15)}
+        .social-icon img{width:100%;height:100%;object-fit:contain}
+        
+        /* Avatar - No Shake */
+        .hero-visual{display:flex;justify-content:center}
+        .avatar-wrapper{position:relative;width:clamp(290px,55vw,420px);height:clamp(290px,55vw,420px)}
+        .avatar-ring{position:absolute;inset:-6%;border-radius:50%;border:3px solid;border-color:var(--cyan) var(--magenta) var(--lime) var(--gold);animation:ringRotate 5s linear infinite;will-change:transform}
+        .avatar-ring-inner{position:absolute;inset:2%;border-radius:50%;border:2px dashed rgba(255,0,255,0.25);animation:ringRotate 8s linear infinite reverse}
+        @keyframes ringRotate{to{transform:rotate(360deg)}}
+        .avatar-glow{position:absolute;inset:15%;border-radius:50%;background:conic-gradient(from 0deg,var(--cyan),var(--magenta),var(--lime),var(--cyan));filter:blur(45px);opacity:0.35;animation:glowPulse 4s ease-in-out infinite}
+        @keyframes glowPulse{0%,100%{opacity:0.3}50%{opacity:0.45}}
+        .avatar-main{position:absolute;inset:18%;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--magenta));padding:4px;box-shadow:0 0 50px var(--cyan-glow)}
+        .avatar-main img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.15)}
+        .avatar-crown{position:absolute;top:5%;left:50%;transform:translateX(-50%);font-size:clamp(48px,13vw,65px);filter:drop-shadow(0 5px 15px var(--gold-glow));z-index:5}
+        
+        /* Stats Bar */
+        .stats-bar{background:rgba(8,8,26,0.95);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);padding:22px 0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+        .stats-bar::-webkit-scrollbar{display:none}
+        .stats-container{display:flex;gap:14px;padding:0 max(20px,var(--safe-left));min-width:max-content}
+        .stat-item{display:flex;align-items:center;gap:14px;padding:16px 20px;min-width:170px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);transition:all 0.3s}
+        .stat-item:hover{border-color:var(--cyan);transform:translateY(-3px)}
+        .stat-icon{width:48px;height:48px;background:linear-gradient(135deg,var(--cyan),var(--magenta));border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:20px;color:#000;flex-shrink:0}
+        .stat-value{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:1px}
+        .stat-label{font-family:var(--font-accent);font-size:10px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:1px}
+        
+        /* YouTube */
+        .youtube-card{background:var(--bg-card);border:1px solid rgba(255,0,51,0.15);border-radius:var(--radius-xl);padding:clamp(30px,7vw,60px);max-width:850px;margin:0 auto;position:relative;overflow:hidden}
+        .youtube-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--yt-red),#ff6666,var(--yt-red))}
+        .youtube-header{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:30px}
+        .youtube-icon{width:70px;height:70px;background:linear-gradient(135deg,var(--yt-red),#cc0022);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;padding:15px;box-shadow:0 10px 35px rgba(255,0,51,0.25)}
+        .youtube-icon img{width:100%;height:100%;object-fit:contain}
+        .youtube-title{font-family:var(--font-display);font-size:clamp(26px,7vw,44px);font-weight:800;letter-spacing:3px;color:var(--yt-red)}
+        
+        .youtube-channel{display:flex;align-items:center;gap:18px;padding:22px;margin-bottom:28px;background:rgba(255,0,51,0.04);border:1px solid rgba(255,0,51,0.15);border-radius:var(--radius-lg);flex-wrap:wrap;justify-content:center}
+        .channel-avatar{width:72px;height:72px;border-radius:50%;border:3px solid var(--yt-red);object-fit:cover;flex-shrink:0}
+        .channel-info{text-align:left;min-width:160px}
+        @media(max-width:500px){.channel-info{text-align:center;width:100%}}
+        .channel-name{font-family:var(--font-display);font-size:clamp(17px,5vw,24px);font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+        @media(max-width:500px){.channel-name{justify-content:center}}
+        .verified-badge{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#1d9bf0,#00c8ff);padding:4px 10px;border-radius:var(--radius-full);font-family:var(--font-accent);font-size:9px;font-weight:700;color:#fff}
+        .channel-handle{font-family:var(--font-body);font-size:14px;font-weight:500;color:var(--text-soft)}
+        
+        .youtube-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:30px}
+        @media(max-width:550px){.youtube-stats{grid-template-columns:1fr}}
+        .yt-stat{background:rgba(255,0,51,0.04);border:1px solid rgba(255,0,51,0.12);border-radius:var(--radius);padding:clamp(22px,5vw,35px) 16px;text-align:center;transition:all 0.3s}
+        .yt-stat:hover{border-color:var(--yt-red);transform:translateY(-4px)}
+        .yt-stat-icon{font-size:28px;color:var(--yt-red);margin-bottom:14px}
+        .yt-stat-value{font-family:var(--font-display);font-size:clamp(28px,7vw,44px);font-weight:800;color:var(--yt-red);letter-spacing:1px;margin-bottom:5px}
+        .yt-stat-label{font-family:var(--font-accent);font-size:11px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:1.5px}
+        
+        .youtube-cta{text-align:center}
+        .live-indicator{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;margin-bottom:18px;background:rgba(255,0,51,0.08);border:1px solid rgba(255,0,51,0.25);border-radius:var(--radius-full);font-family:var(--font-display);font-size:10px;font-weight:700;color:#ff6666;letter-spacing:2px}
+        .live-dot{width:8px;height:8px;background:var(--yt-red);border-radius:50%;animation:livePulse 1.2s ease-in-out infinite}
+        @keyframes livePulse{0%,100%{opacity:1}50%{opacity:0.3}}
+        .subscribe-btn{display:inline-flex;align-items:center;gap:12px;padding:18px 55px;background:linear-gradient(135deg,var(--yt-red),#cc0022);color:#fff;font-family:var(--font-display);font-size:clamp(14px,4vw,18px);font-weight:700;letter-spacing:2px;text-decoration:none;border-radius:var(--radius-full);box-shadow:0 12px 40px rgba(255,0,51,0.35);transition:all 0.3s}
+        .subscribe-btn:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(255,0,51,0.45)}
+        .api-status{margin-top:18px;font-family:var(--font-body);font-size:12px;font-weight:600}
+        .api-status.success{color:var(--lime)}
+        .api-status.error{color:var(--orange)}
+        
+        /* Card Grids */
+        .grid-2{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+        .grid-3{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+        .grid-4{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(min(100%,140px),1fr))}
+        
+        .card{background:var(--bg-card);border:1px solid var(--glass-border);border-radius:var(--radius-xl);padding:clamp(26px,6vw,42px) 22px;text-align:center;transition:all 0.3s}
+        .card:hover{transform:translateY(-6px);border-color:var(--cyan);box-shadow:0 20px 50px rgba(0,245,255,0.08)}
+        .card-icon{width:78px;height:78px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;padding:17px}
+        .card-icon img{width:100%;height:100%;object-fit:contain}
+        .card-icon.youtube{background:linear-gradient(135deg,var(--yt-red),#cc0022)}
+        .card-icon.spotify{background:linear-gradient(135deg,var(--spotify),#15a34a)}
+        .card-icon.facebook{background:linear-gradient(135deg,var(--fb),#0d5bbd)}
+        .card-icon.instagram{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#bc1888)}
+        .card-icon.discord{background:linear-gradient(135deg,var(--discord),#4752c4)}
+        .card-icon.telegram{background:linear-gradient(135deg,var(--tg),#0066aa)}
+        .card-icon.whatsapp{background:linear-gradient(135deg,var(--wa),#128c7e)}
+        .card-title{font-family:var(--font-display);font-size:20px;font-weight:700;letter-spacing:1px;margin-bottom:6px}
+        .card-subtitle{font-family:var(--font-body);font-size:13px;font-weight:500;color:var(--text-soft);margin-bottom:16px}
+        .card-count{font-family:var(--font-display);font-size:32px;font-weight:800;margin-bottom:4px}
+        .card-label{font-family:var(--font-accent);font-size:10px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:1.5px}
+        .card-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;padding:12px 28px;color:#fff;font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:1px;text-decoration:none;border-radius:var(--radius-full);transition:all 0.3s}
+        .card-btn:hover{transform:translateY(-3px)}
+        .card-btn.youtube{background:linear-gradient(135deg,var(--yt-red),#cc0022)}
+        .card-btn.spotify{background:linear-gradient(135deg,var(--spotify),#15a34a)}
+        .card-btn.facebook{background:linear-gradient(135deg,var(--fb),#0d5bbd)}
+        .card-btn.instagram{background:linear-gradient(135deg,#f09433,#dc2743)}
+        .card-btn.discord{background:linear-gradient(135deg,var(--discord),#4752c4)}
+        .card-btn.telegram{background:linear-gradient(135deg,var(--tg),#0066aa)}
+        .card-btn.whatsapp{background:linear-gradient(135deg,var(--wa),#128c7e)}
+        
+        /* Tool Card */
+        .tool-card{background:var(--bg-card);border:1px solid var(--glass-border);border-radius:var(--radius);padding:22px 16px;text-align:center;transition:all 0.3s}
+        .tool-card:hover{transform:translateY(-5px);border-color:var(--cyan)}
+        .tool-icon{width:55px;height:55px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;padding:11px;transition:all 0.3s}
+        .tool-card:hover .tool-icon{border-color:var(--cyan)}
+        .tool-icon img{width:100%;height:100%;object-fit:contain}
+        .tool-name{font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:0.5px;margin-bottom:4px}
+        .tool-category{font-family:var(--font-accent);font-size:10px;font-weight:600;color:var(--cyan);text-transform:uppercase;letter-spacing:1px}
+        
+        /* APK Card */
+        .apk-card{background:var(--bg-card);border:1px solid rgba(255,0,255,0.12);border-radius:var(--radius-xl);padding:clamp(26px,6vw,42px) 22px;text-align:center;position:relative;transition:all 0.3s}
+        .apk-card:hover{transform:translateY(-6px);border-color:var(--magenta);box-shadow:0 20px 50px rgba(255,0,255,0.1)}
+        .apk-badge{position:absolute;top:14px;right:14px;background:linear-gradient(135deg,var(--gold),var(--orange));padding:6px 14px;border-radius:var(--radius-full);font-family:var(--font-display);font-size:9px;font-weight:700;color:#000}
+        .apk-icon{width:72px;height:72px;background:rgba(255,0,255,0.06);border:1px solid var(--glass-border);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;padding:14px;transition:all 0.3s}
+        .apk-card:hover .apk-icon{border-color:var(--magenta)}
+        .apk-icon img{width:100%;height:100%;object-fit:contain}
+        .apk-name{font-family:var(--font-display);font-size:18px;font-weight:700;margin-bottom:5px}
+        .apk-version{font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--magenta);margin-bottom:4px}
+        .apk-size{font-family:var(--font-body);font-size:11px;font-weight:500;color:var(--text-soft);margin-bottom:16px}
+        .apk-meta{display:flex;justify-content:center;gap:24px;margin-bottom:16px}
+        .apk-meta-value{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--cyan)}
+        .apk-meta-label{font-family:var(--font-accent);font-size:9px;font-weight:600;color:var(--text-soft);text-transform:uppercase}
+        .apk-features{text-align:left;margin-bottom:18px;padding:0 12px}
+        .apk-feature{display:flex;align-items:center;gap:10px;font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--text-soft);padding:8px 0;border-bottom:1px solid rgba(255,0,255,0.08)}
+        .apk-feature:last-child{border-bottom:none}
+        .apk-feature i{color:var(--lime);font-size:11px}
+        .apk-download{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:14px;background:linear-gradient(135deg,var(--magenta),var(--cyan));color:#000;font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:1px;text-decoration:none;border-radius:var(--radius-full);transition:all 0.3s}
+        .apk-download:hover{transform:translateY(-3px);box-shadow:0 12px 35px var(--magenta-glow)}
+        
+        /* FF Card */
+        .ff-card{background:var(--bg-card);border:1px solid rgba(0,255,136,0.15);border-radius:var(--radius-xl);padding:clamp(26px,6vw,55px);max-width:700px;margin:0 auto}
+        .ff-header{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:28px}
+        .ff-logo{width:65px;height:65px;background:linear-gradient(135deg,var(--lime),var(--cyan));border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;padding:12px;box-shadow:0 10px 30px var(--lime-glow)}
+        .ff-logo img{width:100%;height:100%;object-fit:contain}
+        .ff-title{font-family:var(--font-display);font-size:clamp(24px,6vw,38px);font-weight:800;letter-spacing:3px;color:var(--lime)}
+        .ff-profile{display:flex;align-items:center;gap:18px;padding:22px;margin-bottom:24px;background:rgba(0,255,136,0.04);border:1px solid rgba(0,255,136,0.15);border-radius:var(--radius-lg);flex-wrap:wrap;justify-content:center}
+        .ff-avatar{width:78px;height:78px;border-radius:var(--radius-lg);border:3px solid var(--lime);object-fit:cover;flex-shrink:0}
+        .ff-info{text-align:left;min-width:160px}
+        @media(max-width:500px){.ff-info{text-align:center;width:100%}}
+        .ff-name{font-family:var(--font-display);font-size:clamp(18px,5vw,26px);font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+        @media(max-width:500px){.ff-name{justify-content:center}}
+        .ff-badges{display:flex;gap:10px;flex-wrap:wrap}
+        @media(max-width:500px){.ff-badges{justify-content:center}}
+        .ff-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:rgba(0,255,136,0.08);border:1px solid rgba(0,255,136,0.25);border-radius:var(--radius-full);font-family:var(--font-display);font-size:9px;font-weight:700;color:var(--lime)}
+        .ff-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+        .ff-stat{background:rgba(0,255,136,0.03);border:1px solid rgba(0,255,136,0.12);border-radius:var(--radius);padding:16px 14px;text-align:center;transition:all 0.3s}
+        .ff-stat:hover{border-color:var(--lime);transform:translateY(-3px)}
+        .ff-stat-label{font-family:var(--font-accent);font-size:10px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+        .ff-stat-value{font-family:var(--font-display);font-size:clamp(13px,4vw,18px);font-weight:700;color:var(--lime);word-break:break-all}
+        
+        /* Contact */
+        .contact-grid{display:grid;gap:26px}
+        @media(min-width:850px){.contact-grid{grid-template-columns:1fr 1.1fr}}
+        .contact-card{background:var(--bg-card);border:1px solid var(--glass-border);border-radius:var(--radius-xl);padding:clamp(26px,6vw,45px);position:relative}
+        .contact-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--magenta),var(--lime));border-radius:var(--radius-xl) var(--radius-xl) 0 0}
+        .contact-title{font-family:var(--font-display);font-size:clamp(20px,5vw,26px);font-weight:700;letter-spacing:1px;margin-bottom:12px}
+        .contact-desc{font-family:var(--font-body);font-size:14px;font-weight:400;color:var(--text-soft);line-height:1.8;margin-bottom:26px}
+        .contact-item{display:flex;align-items:center;gap:16px;padding:16px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);margin-bottom:14px;text-decoration:none;color:inherit;transition:all 0.3s}
+        .contact-item:hover{border-color:var(--cyan);transform:translateX(6px)}
+        .contact-icon{width:50px;height:50px;background:linear-gradient(135deg,var(--cyan),var(--magenta));border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:20px;color:#000;flex-shrink:0}
+        .contact-details h4{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:4px}
+        .contact-details p{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--cyan)}
+        
+        .form-title{font-family:var(--font-display);font-size:clamp(20px,5vw,24px);font-weight:700;letter-spacing:1px;text-align:center;margin-bottom:24px}
+        .form-group{margin-bottom:18px}
+        .form-group label{display:block;font-family:var(--font-display);font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+        .form-group input,.form-group textarea{width:100%;padding:14px 18px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);color:var(--text);font-family:var(--font-body);font-size:15px;font-weight:500;transition:all 0.3s}
+        .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 25px rgba(0,245,255,0.1)}
+        .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-dim);font-weight:400}
+        .form-group textarea{min-height:110px;resize:vertical}
+        .form-submit{width:100%;padding:16px;background:linear-gradient(135deg,var(--cyan),var(--magenta));border:none;border-radius:var(--radius);color:#000;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:2px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all 0.3s}
+        .form-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px var(--cyan-glow)}
+        
+        /* Payment */
+        .payment-wrapper{background:var(--bg-card);border:1px solid rgba(255,215,0,0.15);border-radius:var(--radius-xl);padding:clamp(26px,6vw,55px)}
+        .payment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px;margin-bottom:30px}
+        .payment-card{--pay-color:#e2136e;--pay-rgb:226,19,110;background:rgba(var(--pay-rgb),0.04);border:1px solid rgba(var(--pay-rgb),0.2);border-radius:var(--radius-xl);padding:clamp(26px,6vw,42px) 22px;text-align:center;transition:all 0.3s}
+        .payment-card:hover{transform:translateY(-6px);border-color:var(--pay-color);box-shadow:0 20px 50px rgba(var(--pay-rgb),0.15)}
+        .payment-card.bkash{--pay-color:#FFFFFF;--pay-rgb:226,19,110}
+        .payment-card.nagad{--pay-color:#FFFFFF;--pay-rgb:246,146,30}
+        .payment-card.rocket{--pay-color:#FFFFFF;--pay-rgb:139,47,137}
+        .payment-logo{width:78px;height:78px;background:var(--pay-color);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;padding:14px;box-shadow:0 10px 30px rgba(var(--pay-rgb),0.35)}
+        .payment-logo img{width:100%;height:100%;object-fit:contain}
+        .payment-name{font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--pay-color);letter-spacing:1px;margin-bottom:6px}
+        .payment-type{font-family:var(--font-accent);font-size:11px;font-weight:600;color:var(--text-soft);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
+        .payment-number{background:rgba(0,0,0,0.25);padding:16px;border-radius:var(--radius);margin-bottom:14px;border:2px dashed var(--pay-color)}
+        .payment-number span{font-family:var(--font-display);font-size:clamp(16px,5vw,22px);font-weight:700;color:var(--cyan);letter-spacing:2px}
+        .copy-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;background:var(--pay-color);border:none;border-radius:var(--radius-full);color:#00000;font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all 0.3s}
+        .copy-button:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(var(--pay-rgb),0.4)}
+        .copy-button.copied{background:var(--lime)}
+        .payment-notice{padding:22px;background:rgba(255,215,0,0.04);border:1px solid rgba(255,215,0,0.15);border-radius:var(--radius);text-align:center}
+        .payment-notice h4{font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--gold);letter-spacing:1px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:10px}
+        .payment-notice p{font-family:var(--font-body);font-size:13px;font-weight:400;color:var(--text-soft);line-height:1.9}
+        .payment-notice strong{color:var(--cyan);font-weight:600}
+        
+        /* Footer */
+        .footer{padding:90px 0 45px;border-top:1px solid var(--glass-border);background:linear-gradient(180deg,transparent,rgba(8,8,26,0.4))}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:45px;margin-bottom:50px;text-align:center}
+        @media(min-width:768px){.footer-grid{text-align:left}}
+        .footer-brand h3{font-family:var(--font-display);font-size:24px;font-weight:800;letter-spacing:2px;margin-bottom:14px}
+        .footer-brand h3 span{color:var(--cyan)}
+        .footer-brand p{font-family:var(--font-body);font-size:13px;font-weight:400;color:var(--text-soft);line-height:2;margin-bottom:20px}
+        .footer-socials{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+        @media(min-width:768px){.footer-socials{justify-content:flex-start}}
+        .footer-socials a{width:42px;height:42px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;padding:10px;transition:all 0.3s}
+        .footer-socials a:hover{background:var(--cyan);border-color:var(--cyan);transform:translateY(-4px)}
+        .footer-socials img{width:100%;height:100%;object-fit:contain}
+        .footer-socials a:hover img{filter:brightness(0) invert(1)}
+        .footer-links h4{font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--cyan);letter-spacing:2px;margin-bottom:16px}
+        .footer-links ul{list-style:none}
+        .footer-links li{margin-bottom:12px}
+        .footer-links a{color:var(--text-soft);text-decoration:none;font-family:var(--font-body);font-size:13px;font-weight:500;transition:color 0.3s}
+        .footer-links a:hover{color:var(--cyan)}
+        .footer-bottom{text-align:center;padding-top:26px;border-top:1px solid var(--glass-border)}
+        .footer-bottom p{font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--text-soft)}
+        .footer-bottom span{font-family:var(--font-display);font-weight:700;color:var(--cyan)}
+        
+        /*==========================================
+          PREMIUM BACK TO TOP BUTTON - UNIQUE DESIGN
+          NO SHAKE | SMOOTH ANIMATIONS
+        ==========================================*/
+        .back-to-top{
+            position:fixed;
+            bottom:max(30px,var(--safe-bottom));
+            right:25px;
+            z-index:90;
+            opacity:0;
+            visibility:hidden;
+            transform:translateY(30px) scale(0.8);
+            transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+            -webkit-tap-highlight-color:transparent;
+        }
+        .back-to-top.visible{
+            opacity:1;
+            visibility:visible;
+            transform:translateY(0) scale(1);
+        }
+        
+        .btt-wrapper{
+            position:relative;
+            width:60px;
+            height:60px;
+            cursor:pointer;
+        }
+        
+        /* Outer rotating ring */
+        .btt-ring{
+            position:absolute;
+            inset:-4px;
+            border-radius:50%;
+            background:conic-gradient(from 0deg,var(--cyan),var(--magenta),var(--lime),var(--gold),var(--cyan));
+            animation:bttRingSpin 4s linear infinite;
+            opacity:0.8;
+        }
+        .btt-ring::before{
+            content:'';
+            position:absolute;
+            inset:3px;
+            background:var(--bg);
+            border-radius:50%;
+        }
+        
+        @keyframes bttRingSpin{
+            to{transform:rotate(360deg)}
+        }
+        
+        /* Main button */
+        .btt-button{
+            position:absolute;
+            inset:0;
+            border-radius:50%;
+            background:linear-gradient(145deg,rgba(0,245,255,0.15),rgba(255,0,255,0.1));
+            backdrop-filter:blur(10px);
+            -webkit-backdrop-filter:blur(10px);
+            border:2px solid rgba(0,245,255,0.3);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:all 0.3s ease;
+            overflow:hidden;
+        }
+        
+        .btt-button::before{
+            content:'';
+            position:absolute;
+            inset:0;
+            background:radial-gradient(circle at 30% 30%,rgba(255,255,255,0.15),transparent 60%);
+            opacity:0.6;
+        }
+        
+        /* Glow effect on hover */
+        .btt-wrapper:hover .btt-button{
+            border-color:var(--cyan);
+            box-shadow:0 0 30px var(--cyan-glow),0 0 60px rgba(0,245,255,0.2),inset 0 0 20px rgba(0,245,255,0.1);
+        }
+        
+        .btt-wrapper:hover .btt-ring{
+            animation-duration:2s;
+            opacity:1;
+        }
+        
+        /* Arrow icon container */
+        .btt-icon{
+            position:relative;
+            z-index:2;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:2px;
+        }
+        
+        /* Animated arrows */
+        .btt-arrow{
+            width:0;
+            height:0;
+            border-left:8px solid transparent;
+            border-right:8px solid transparent;
+            border-bottom:10px solid var(--cyan);
+            opacity:0.4;
+            animation:bttArrowPulse 1.5s ease-in-out infinite;
+        }
+        .btt-arrow:nth-child(1){animation-delay:0s}
+        .btt-arrow:nth-child(2){animation-delay:0.15s;opacity:0.7}
+        .btt-arrow:nth-child(3){animation-delay:0.3s;opacity:1}
+        
+        @keyframes bttArrowPulse{
+            0%,100%{transform:translateY(0);opacity:0.3}
+            50%{transform:translateY(-4px);opacity:1}
+        }
+        
+        .btt-wrapper:hover .btt-arrow{
+            border-bottom-color:#fff;
+        }
+        
+        /* Progress circle */
+        .btt-progress{
+            position:absolute;
+            inset:-6px;
+            border-radius:50%;
+            pointer-events:none;
+        }
+        .btt-progress svg{
+            width:100%;
+            height:100%;
+            transform:rotate(-90deg);
+        }
+        .btt-progress circle{
+            fill:none;
+            stroke:var(--lime);
+            stroke-width:2;
+            stroke-linecap:round;
+            stroke-dasharray:200;
+            stroke-dashoffset:200;
+            transition:stroke-dashoffset 0.2s ease;
+        }
+        
+        /* Particle effects */
+        .btt-particles{
+            position:absolute;
+            inset:0;
+            border-radius:50%;
+            pointer-events:none;
+        }
+        .btt-particle{
+            position:absolute;
+            width:4px;
+            height:4px;
+            background:var(--cyan);
+            border-radius:50%;
+            opacity:0;
+        }
+        .btt-wrapper:hover .btt-particle{
+            animation:bttParticle 1s ease-out infinite;
+        }
+        .btt-particle:nth-child(1){top:50%;left:-5px;animation-delay:0s}
+        .btt-particle:nth-child(2){top:0;left:50%;animation-delay:0.2s}
+        .btt-particle:nth-child(3){top:50%;right:-5px;animation-delay:0.4s}
+        .btt-particle:nth-child(4){bottom:0;left:50%;animation-delay:0.6s}
+        
+        @keyframes bttParticle{
+            0%{transform:scale(0);opacity:1}
+            100%{transform:scale(3);opacity:0}
+        }
+        
+        /* Tooltip */
+        .btt-tooltip{
+            position:absolute;
+            right:75px;
+            top:50%;
+            transform:translateY(-50%) translateX(10px);
+            background:var(--bg-card);
+            border:1px solid var(--cyan);
+            padding:8px 14px;
+            border-radius:8px;
+            font-family:var(--font-display);
+            font-size:10px;
+            font-weight:600;
+            color:var(--cyan);
+            letter-spacing:1px;
+            white-space:nowrap;
+            opacity:0;
+            visibility:hidden;
+            transition:all 0.3s ease;
+            pointer-events:none;
+        }
+        .btt-tooltip::after{
+            content:'';
+            position:absolute;
+            right:-6px;
+            top:50%;
+            transform:translateY(-50%);
+            border:6px solid transparent;
+            border-left-color:var(--cyan);
+        }
+        .btt-wrapper:hover .btt-tooltip{
+            opacity:1;
+            visibility:visible;
+            transform:translateY(-50%) translateX(0);
+        }
+        
+        /* Toast */
+        .toast-container{position:fixed;bottom:max(95px,calc(var(--safe-bottom) + 75px));left:50%;transform:translateX(-50%);z-index:9999;width:92%;max-width:340px}
+        .toast{padding:16px 22px;background:var(--bg-card);border:1px solid var(--lime);border-radius:var(--radius);font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:12px;box-shadow:0 15px 50px rgba(0,0,0,0.4);animation:toastIn 0.4s}
+        .toast i{color:var(--lime);font-size:20px}
+        @keyframes toastIn{from{opacity:0;transform:translateY(20px) scale(0.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+        .toast.hide{animation:toastOut 0.3s forwards}
+        @keyframes toastOut{to{opacity:0;transform:translateY(-15px) scale(0.95)}}
+        
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+    </style>
+</head>
+<body class="locked">
+    <div class="bg-fx"><div class="bg-grid"></div></div>
+
+    <!-- Premium Loader -->
+    <div class="loader-screen" id="loaderScreen">
+        <div class="loader-content">
+            <div class="loader-avatar-wrap">
+                <div class="loader-ring-outer"></div>
+                <div class="loader-ring-mid"></div>
+                <div class="loader-glow"></div>
+                <div class="loader-avatar">
+                    <img src="https://i.ibb.co/t5JGk7f/Snap-Insta-to-571796753-17887536921380207-8356689842133979325-n.jpg" alt="Sheikh Rihan">
+                </div>
+            </div>
+            <h1 class="loader-title">SHEIKH RIHAN</h1>
+            <p class="loader-subtitle">Pro Gamer • YouTuber • Creator</p>
+            <div class="loader-progress-wrap">
+                <div class="loader-progress-track">
+                    <div class="loader-progress-bar" id="loaderBar"></div>
+                </div>
+            </div>
+            <div class="loader-percent" id="loaderPercent">0%</div>
+            <p class="loader-status">Loading<span class="loader-dots"><span></span><span></span><span></span></span></p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">
+            <img src="https://i.ibb.co/t5JGk7f/Snap-Insta-to-571796753-17887536921380207-8356689842133979325-n.jpg" alt="SR" class="logo-img">
+            <div class="logo-text">
+                <span class="logo-name">SHEIKH RIHAN</span>
+                <span class="logo-tag">PRO GAMER ⚡</span>
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#youtube">YouTube</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#apk">APK</a></li>
+            <li><a href="#freefire">Free Fire</a></li>
+            <li><a href="#social">Social</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-btn" id="themeBtn" aria-label="Theme"><i class="fas fa-moon"></i></button>
+            <a href="https://www.youtube.com/@RIHANXLIVEE?sub_confirmation=1" target="_blank" class="nav-cta"><i class="fab fa-youtube"></i> SUBSCRIBE</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#home">⚡ HOME</a>
+        <a href="#youtube">📺 YOUTUBE</a>
+        <a href="#music">🎵 MUSIC</a>
+        <a href="#tools">🛠️ TOOLS</a>
+        <a href="#apk">📱 APK</a>
+        <a href="#freefire">🎮 FREE FIRE</a>
+        <a href="#social">🌐 SOCIAL</a>
+        <a href="#contact">📞 CONTACT</a>
+        <a href="#payment">💳 PAYMENT</a>
+        <div class="mobile-nav-social">
+            <a href="https://www.youtube.com/@RIHANXLIVEE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"></a>
+            <a href="https://www.facebook.com/sheikhrihan90x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></a>
+            <a href="https://www.instagram.com/rihansk1.0" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></a>
+            <a href="https://discord.gg/kNu3rvwZaV" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="DC"></a>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-content">
+                        <div class="hero-badge"><span class="status-dot"></span><i class="fas fa-bolt"></i> PRO GAMER & CREATOR</div>
+                        <h1 class="hero-title"><span class="line-1">SHEIKH</span><span class="line-2">RIHAN</span></h1>
+                        <p class="hero-subtitle">FREE FIRE • <span>YOUTUBER</span> • CREATOR</p>
+                        <div class="hero-typing"><span class="typing-text" id="typingText"></span></div>
+                        <p class="hero-desc">🎮 Pro Free Fire Player | 📺 YouTuber with 1.3K+ Family | 🎬 Content Creator | 🇧🇩 Bangladeshi Gaming Legend</p>
+                        <div class="hero-buttons">
+                            <a href="https://www.youtube.com/@RIHANXLIVEE?sub_confirmation=1" target="_blank" class="btn btn-primary"><i class="fab fa-youtube"></i> SUBSCRIBE</a>
+                            <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> CONTACT</a>
+                        </div>
+                        <div class="hero-socials">
+                            <a href="https://www.youtube.com/@RIHANXLIVEE" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"></a>
+                            <a href="https://www.facebook.com/sheikhrihan90x" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></a>
+                            <a href="https://www.instagram.com/rihansk1.0" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></a>
+                            <a href="https://www.tiktok.com/@rihan1th" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TT"></a>
+                            <a href="https://discord.gg/kNu3rvwZaV" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="DC"></a>
+                            <a href="https://open.spotify.com" target="_blank" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="SP"></a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-ring-inner"></div>
+                            <div class="avatar-glow"></div>
+                            <div class="avatar-crown">👑</div>
+                            <div class="avatar-main"><img src="https://i.ibb.co/t5JGk7f/Snap-Insta-to-571796753-17887536921380207-8356689842133979325-n.jpg" alt="SHEIKH RIHAN"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <div class="stats-bar">
+            <div class="stats-container">
+                <div class="stat-item"><div class="stat-icon"><i class="fas fa-users"></i></div><div><div class="stat-value gradient-text" id="statSubs">--</div><div class="stat-label">Subscribers</div></div></div>
+                <div class="stat-item"><div class="stat-icon"><i class="fas fa-eye"></i></div><div><div class="stat-value gradient-text" id="statViews">--</div><div class="stat-label">Total Views</div></div></div>
+                <div class="stat-item"><div class="stat-icon"><i class="fas fa-video"></i></div><div><div class="stat-value gradient-text" id="statVideos">--</div><div class="stat-label">Videos</div></div></div>
+                <div class="stat-item"><div class="stat-icon"><i class="fas fa-trophy"></i></div><div><div class="stat-value gradient-text">1000+</div><div class="stat-label">FF Wins</div></div></div>
+                <div class="stat-item"><div class="stat-icon"><i class="fas fa-download"></i></div><div><div class="stat-value gradient-text">50K+</div><div class="stat-label">Downloads</div></div></div>
+                <div class="stat-item"><div class="stat-icon"><i class="fas fa-heart"></i></div><div><div class="stat-value gradient-text">25K+</div><div class="stat-label">Likes</div></div></div>
+            </div>
+        </div>
+
+        <!-- YouTube -->
+        <section class="section" id="youtube">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"> LIVE DATA</div>
+                    <h2 class="section-title gradient-text">YouTube Stats</h2>
+                    <p class="section-desc">Real-time statistics from YouTube API</p>
+                </div>
+                <div class="youtube-card">
+                    <div class="youtube-header">
+                        <div class="youtube-icon"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"></div>
+                        <h3 class="youtube-title">YOUTUBE</h3>
+                    </div>
+                    <div class="youtube-channel">
+                        <img src="https://i.ibb.co/t5JGk7f/Snap-Insta-to-571796753-17887536921380207-8356689842133979325-n.jpg" alt="CH" class="channel-avatar">
+                        <div class="channel-info">
+                            <h4 class="channel-name">RIHAN X LIVE <span class="verified-badge"><i class="fas fa-check"></i> VERIFIED</span></h4>
+                            <p class="channel-handle">@RIHANXLIVEE</p>
+                        </div>
+                    </div>
+                    <div class="youtube-stats">
+                        <div class="yt-stat"><i class="fas fa-users yt-stat-icon"></i><div class="yt-stat-value" id="ytSubs">--</div><div class="yt-stat-label">Subscribers</div></div>
+                        <div class="yt-stat"><i class="fas fa-eye yt-stat-icon"></i><div class="yt-stat-value" id="ytViews">--</div><div class="yt-stat-label">Total Views</div></div>
+                        <div class="yt-stat"><i class="fas fa-video yt-stat-icon"></i><div class="yt-stat-value" id="ytVideos">--</div><div class="yt-stat-label">Videos</div></div>
+                    </div>
+                    <div class="youtube-cta">
+                        <div class="live-indicator"><span class="live-dot"></span> LIVE UPDATES</div><br>
+                        <a href="https://www.youtube.com/@RIHANXLIVEE?sub_confirmation=1" target="_blank" class="subscribe-btn"><i class="fab fa-youtube"></i> SUBSCRIBE NOW</a>
+                        <p class="api-status" id="apiStatus">⏳ Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music -->
+        <section class="section" id="music">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-music"></i> MUSIC</div>
+                    <h2 class="section-title gradient-text">Music I Love</h2>
+                    <p class="section-desc">Check out my favorite music platforms</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card"><div class="card-icon spotify"><img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="SP"></div><h3 class="card-title">Spotify</h3><p class="card-subtitle">@sheikhrihan</p><a href="https://open.spotify.com" target="_blank" class="card-btn spotify"><i class="fab fa-spotify"></i> OPEN</a></div>
+                    <div class="card"><div class="card-icon youtube"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968852.png" alt="YTM"></div><h3 class="card-title">YT Music</h3><p class="card-subtitle">@RIHANXLIVEE</p><a href="https://music.youtube.com" target="_blank" class="card-btn youtube"><i class="fab fa-youtube"></i> OPEN</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools -->
+        <section class="section" id="tools">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-tools"></i> SETUP</div>
+                    <h2 class="section-title gradient-text">Tools I Use</h2>
+                    <p class="section-desc">Professional tools for content creation</p>
+                </div>
+                <div class="grid-4">
+                    <div class="tool-card"><div class="tool-icon"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="PS"></div><h4 class="tool-name">Photoshop</h4><span class="tool-category">Edit</span></div>
+                    <div class="tool-card"><div class="tool-icon"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968525.png" alt="PR"></div><h4 class="tool-name">Premiere</h4><span class="tool-category">Video</span></div>
+                    <div class="tool-card"><div class="tool-icon"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968428.png" alt="AE"></div><h4 class="tool-name">After FX</h4><span class="tool-category">Motion</span></div>
+                    <div class="tool-card"><div class="tool-icon"><img src="https://play-lh.googleusercontent.com/B84zI7IJ4xFezZ3xdKGQIAjF51KuTcA3cvPgaJRdtSwxnP7E8cJ4u9qFNXNJQLgJ_4E=w240-h480-rw" alt="CC"></div><h4 class="tool-name">CapCut</h4><span class="tool-category">Mobile</span></div>
+                    <div class="tool-card"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/OBS_Studio_Logo.svg" alt="OBS"></div><h4 class="tool-name">OBS</h4><span class="tool-category">Stream</span></div>
+                    <div class="tool-card"><div class="tool-icon"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="DC"></div><h4 class="tool-name">Discord</h4><span class="tool-category">Chat</span></div>
+                    <div class="tool-card"><div class="tool-icon"><img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="VS"></div><h4 class="tool-name">VS Code</h4><span class="tool-category">Dev</span></div>
+                    <div class="tool-card"><div class="tool-icon"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="TG"></div><h4 class="tool-name">Telegram</h4><span class="tool-category">Msg</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APK -->
+        <section class="section" id="apk">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fab fa-android"></i> PREMIUM</div>
+                    <h2 class="section-title gradient-text">Premium APKs</h2>
+                    <p class="section-desc">Exclusive modded apps collection</p>
+                </div>
+                <div class="grid-3">
+                    <div class="apk-card"><div class="apk-badge">🔥 HOT</div><div class="apk-icon"><img src="https://i.ibb.co/jZfHr2RQ/images.jpg" alt="FF"></div><h4 class="apk-name">Free Fire MAX</h4><p class="apk-version">v2.104.1</p><p class="apk-size">📦 1.2 GB</p><div class="apk-meta"><div><span class="apk-meta-value">50K+</span><span class="apk-meta-label">Downloads</span></div><div><span class="apk-meta-value">4.9★</span><span class="apk-meta-label">Rating</span></div></div><div class="apk-features"><div class="apk-feature"><i class="fas fa-check"></i> Anti-Ban Protection</div><div class="apk-feature"><i class="fas fa-check"></i> Unlimited Diamonds</div><div class="apk-feature"><i class="fas fa-check"></i> All Unlocked</div></div><a href="#" class="apk-download"><i class="fas fa-download"></i> DOWNLOAD</a></div>
+                    <div class="apk-card"><div class="apk-badge">⭐ PRO</div><div class="apk-icon"><img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="SP"></div><h4 class="apk-name">Spotify</h4><p class="apk-version">v8.9.12</p><p class="apk-size">📦 85 MB</p><div class="apk-meta"><div><span class="apk-meta-value">100K+</span><span class="apk-meta-label">Downloads</span></div><div><span class="apk-meta-value">4.8★</span><span class="apk-meta-label">Rating</span></div></div><div class="apk-features"><div class="apk-feature"><i class="fas fa-check"></i> No Ads Forever</div><div class="apk-feature"><i class="fas fa-check"></i> Unlimited Skips</div><div class="apk-feature"><i class="fas fa-check"></i> Offline Download</div></div><a href="#" class="apk-download"><i class="fas fa-download"></i> DOWNLOAD</a></div>
+                    <div class="apk-card"><div class="apk-badge">💎 VIP</div><div class="apk-icon"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"></div><h4 class="apk-name">YouTube</h4><p class="apk-version">v18.45.36</p><p class="apk-size">📦 120 MB</p><div class="apk-meta"><div><span class="apk-meta-value">200K+</span><span class="apk-meta-label">Downloads</span></div><div><span class="apk-meta-value">4.9★</span><span class="apk-meta-label">Rating</span></div></div><div class="apk-features"><div class="apk-feature"><i class="fas fa-check"></i> Ad-Free Experience</div><div class="apk-feature"><i class="fas fa-check"></i> Background Play</div><div class="apk-feature"><i class="fas fa-check"></i> Download Videos</div></div><a href="#" class="apk-download"><i class="fas fa-download"></i> DOWNLOAD</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Fire -->
+        <section class="section" id="freefire">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-gamepad"></i> PRO PLAYER</div>
+                    <h2 class="section-title gradient-text">Free Fire</h2>
+                    <p class="section-desc">My gaming profile & stats</p>
+                </div>
+                <div class="ff-card">
+                    <div class="ff-header"><div class="ff-logo"><img src="https://i.ibb.co/jZfHr2RQ/images.jpg" alt="FF"></div><h3 class="ff-title">FREE FIRE</h3></div>
+                    <div class="ff-profile">
+                        <img src="https://i.ibb.co/t5JGk7f/Snap-Insta-to-571796753-17887536921380207-8356689842133979325-n.jpg" alt="P" class="ff-avatar">
+                        <div class="ff-info"><h4 class="ff-name">SHEIKH RIHAN <span class="verified-badge"><i class="fas fa-check"></i></span></h4><div class="ff-badges"><span class="ff-badge"><i class="fas fa-crown"></i>GAME CHANGER</span><span class="ff-badge"><i class="fas fa-fire"></i> 7 YEARS OLD</span></div></div>
+                    </div>
+                    <div class="ff-stats">
+                        <div class="ff-stat"><div class="ff-stat-label">UID</div><div class="ff-stat-value">660468373</div></div>
+                        <div class="ff-stat"><div class="ff-stat-label">IGN</div><div class="ff-stat-value">Ꭱɪʜꫝɴ 〆 ʟɪᴠᴇ</div></div>
+                        <div class="ff-stat"><div class="ff-stat-label">Level</div><div class="ff-stat-value">75 lvl</div></div>
+                        <div class="ff-stat"><div class="ff-stat-label">Region</div><div class="ff-stat-value">🇧🇩 BD</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social -->
+        <section class="section" id="social">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-share-alt"></i> CONNECT</div>
+                    <h2 class="section-title gradient-text">Social Media</h2>
+                    <p class="section-desc">Follow me on all platforms</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card"><div class="card-icon youtube"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"></div><h3 class="card-title">YouTube</h3><p class="card-subtitle">@RIHANXLIVEE</p><div class="card-count" style="color:#ff0033" id="socialYtSubs">--</div><div class="card-label">Subscribers</div><a href="https://www.youtube.com/@RIHANXLIVEE?sub_confirmation=1" target="_blank" class="card-btn youtube"><i class="fab fa-youtube"></i> SUBSCRIBE</a></div>
+                    <div class="card"><div class="card-icon facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></div><h3 class="card-title">Facebook</h3><p class="card-subtitle">sheikhrihan90x</p><div class="card-count" style="color:#1877f2">1.5K+</div><div class="card-label">Followers</div><a href="https://www.facebook.com/sheikhrihan90x" target="_blank" class="card-btn facebook"><i class="fab fa-facebook-f"></i> FOLLOW</a></div>
+                    <div class="card"><div class="card-icon instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></div><h3 class="card-title">Instagram</h3><p class="card-subtitle">@rihansk1.0</p><div class="card-count" style="color:#e4405f">1K+</div><div class="card-label">Followers</div><a href="https://www.instagram.com/rihansk1.0" target="_blank" class="card-btn instagram"><i class="fab fa-instagram"></i> FOLLOW</a></div>
+                    <div class="card"><div class="card-icon discord"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="DC"></div><h3 class="card-title">Discord</h3><p class="card-subtitle">SHEIKH RIHAN</p><div class="card-count" style="color:#5865f2">15K+</div><div class="card-label">Members</div><a href="https://discord.gg/kNu3rvwZaV" target="_blank" class="card-btn discord"><i class="fab fa-discord"></i> JOIN</a></div>
+                    <div class="card"><div class="card-icon telegram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="TG"></div><h3 class="card-title">Telegram</h3><p class="card-subtitle">@sheikhrihan90x</p><div class="card-count" style="color:#0088cc">2K+</div><div class="card-label">Members</div><a href="https://t.me/sheikhrihan90x" target="_blank" class="card-btn telegram"><i class="fab fa-telegram-plane"></i> JOIN</a></div>
+                    <div class="card"><div class="card-icon whatsapp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WA"></div><h3 class="card-title">WhatsApp</h3><p class="card-subtitle">SHEIKH RIHAN</p><div class="card-count" style="color:#25d366">1K+</div><div class="card-label">Members</div><a href="https://wa.me/8801762951509" target="_blank" class="card-btn whatsapp"><i class="fab fa-whatsapp"></i> JOIN</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-envelope"></i> CONTACT</div>
+                    <h2 class="section-title gradient-text">Get In Touch</h2>
+                    <p class="section-desc">Reach out for collaborations</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3 class="contact-title gradient-text">Contact Info</h3>
+                        <p class="contact-desc">Available for sponsorships, collaborations & business inquiries!</p>
+                        <a href="mailto:sheikhrihan138@gmail.com" class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h4>EMAIL</h4><p>sheikhrihan138@gmail.com</p></div></a>
+                        <a href="tel:+8801762951509" class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-details"><h4>PHONE</h4><p>+880 1762-951509</p></div></a>
+                        <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-details"><h4>LOCATION</h4><p>Jessore, Bangladesh 🇧🇩</p></div></div>
+                    </div>
+                    <div class="contact-card">
+                        <h3 class="form-title">Send Message ✉️</h3>
+                        <form id="contactForm">
+                            <div class="form-group"><label>YOUR NAME</label><input type="text" placeholder="Enter your name" required></div>
+                            <div class="form-group"><label>YOUR EMAIL</label><input type="email" placeholder="Enter your email" required></div>
+                            <div class="form-group"><label>YOUR MESSAGE</label><textarea placeholder="Type your message here..." required></textarea></div>
+                            <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment -->
+        <section class="section" id="payment">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-wallet"></i> SUPPORT</div>
+                    <h2 class="section-title gradient-text">Payment Methods</h2>
+                    <p class="section-desc">Support the channel via donation</p>
+                </div>
+                <div class="payment-wrapper">
+                    <div class="payment-grid">
+                        <div class="payment-card bkash"><div class="payment-logo"><img src="https://freelogopng.com/images/all_img/1656234841bkash-icon-png.png" alt="bKash"></div><h4 class="payment-name">bKash</h4><p class="payment-type">Personal</p><div class="payment-number"><span>01762951509</span></div><button class="copy-button" onclick="copyNumber('01762951509',this)"><i class="fas fa-copy"></i> COPY</button></div>
+                        <div class="payment-card nagad"><div class="payment-logo"><img src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png" alt="Nagad"></div><h4 class="payment-name">Nagad</h4><p class="payment-type">Personal</p><div class="payment-number"><span>01762951509</span></div><button class="copy-button" onclick="copyNumber('01762951509',this)"><i class="fas fa-copy"></i> COPY</button></div>
+                        <div class="payment-card rocket"><div class="payment-logo"><img src="https://seeklogo.com/images/D/dutch-bangla-rocket-logo-B4D1CC458D-seeklogo.com.png" alt="Rocket"></div><h4 class="payment-name">Rocket</h4><p class="payment-type">Personal</p><div class="payment-number"><span>01762951509-8</span></div><button class="copy-button" onclick="copyNumber('017629515098',this)"><i class="fas fa-copy"></i> COPY</button></div>
+                    </div>
+                    <div class="payment-notice"><h4><i class="fas fa-info-circle"></i> IMPORTANT NOTE</h4><p>After payment, send screenshot to <strong>WhatsApp</strong> for confirmation. Thanks! 💜</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand"><h3>SHEIKH <span>RIHAN</span></h3><p>🎮 Pro Gamer<br>📺 YouTuber<br>🇧🇩 Bangladesh</p><div class="footer-socials"><a href="https://www.youtube.com/@RIHANXLIVEE" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"></a><a href="https://www.facebook.com/sheikhrihan90x" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></a><a href="https://www.instagram.com/rihansk1.0" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></a><a href="https://discord.gg/kNu3rvwZaV" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="DC"></a></div></div>
+                    <div class="footer-links"><h4>NAVIGATION</h4><ul><li><a href="#home">Home</a></li><li><a href="#youtube">YouTube</a></li><li><a href="#social">Social</a></li><li><a href="#contact">Contact</a></li></ul></div>
+                    <div class="footer-links"><h4>MORE LINKS</h4><ul><li><a href="#apk">APK Zone</a></li><li><a href="#freefire">Free Fire</a></li><li><a href="#payment">Payment</a></li></ul></div>
+                </div>
+                <div class="footer-bottom"><p>© 2024 <span>SHEIKH RIHAN</span> • Made with 💜</p></div>
+            </div>
+        </footer>
+    </main>
+
+
+            
+            <!-- Particles -->
+            <div class="btt-particles">
+                <div class="btt-particle"></div>
+                <div class="btt-particle"></div>
+                <div class="btt-particle"></div>
+                <div class="btt-particle"></div>
+            </div>
+            
+            <!-- Tooltip -->
+            <div class="btt-tooltip">BACK TO TOP</div>
+        </div>
+    </div>
+
+    <script>
+    (function(){
+        'use strict';
+        
+        const CONFIG={API_KEY:'AIzaSyCbfAyIJ2YuF_NjJs4ai68sPDVU9v-OQUo',CHANNEL_ID:'UCw838b6jU39JdlmAa7pUBUQ',TYPING_TEXTS:['🎮 PRO FREE FIRE PLAYER','📺 1.3K+ YOUTUBE FAMILY','🎬 CONTENT CREATOR','🇧🇩 BANGLADESHI GAMER','⚡ READY FOR ACTION','🔥 TOP 1% PLAYER','💜 GAMING LEGEND']};
+        
+        const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+        const loaderScreen=$('#loaderScreen'),loaderBar=$('#loaderBar'),loaderPercent=$('#loaderPercent'),navbar=$('#navbar'),menuToggle=$('#menuToggle'),mobileNav=$('#mobileNav'),themeBtn=$('#themeBtn'),backToTop=$('#backToTop'),typingText=$('#typingText'),toastContainer=$('#toastContainer'),contactForm=$('#contactForm'),bttProgressCircle=$('#bttProgressCircle');
+        
+        let scrollY = 0;
+        
+        // Loader
+        let progress=0;
+        const loaderInt=setInterval(()=>{progress+=Math.random()*12+5;if(progress>=100){progress=100;clearInterval(loaderInt)}loaderBar.style.width=progress+'%';loaderPercent.textContent=Math.floor(progress)+'%'},100);
+        window.addEventListener('load',()=>{setTimeout(()=>{loaderBar.style.width='100%';loaderPercent.textContent='100%';setTimeout(()=>{loaderScreen.classList.add('hidden');document.body.classList.remove('locked')},400)},300)});
+        setTimeout(()=>{loaderScreen.classList.add('hidden');document.body.classList.remove('locked')},5000);
+        
+        // Typing
+        let ti=0,ci=0,del=false;
+        function typeEffect(){const t=CONFIG.TYPING_TEXTS[ti];typingText.textContent=t.substring(0,del?ci--:++ci);let d=del?30:60;if(!del&&ci===t.length){d=2200;del=true}else if(del&&ci===0){del=false;ti=(ti+1)%CONFIG.TYPING_TEXTS.length;d=600}setTimeout(typeEffect,d)}
+        setTimeout(typeEffect,1800);
+        
+        // Nav & Back to Top with Progress
+        let lastY=0,ticking=false;
+        function updateNav(){
+            const y=window.scrollY;
+            scrollY = y;
+            navbar.classList.toggle('scrolled',y>50);
+            navbar.classList.toggle('hidden',y>lastY&&y>150);
+            backToTop.classList.toggle('visible',y>400);
+            
+            // Update progress circle
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (y / docHeight) * 100;
+            const circumference = 2 * Math.PI * 32; // r=32
+            const offset = circumference - (scrollPercent / 100) * circumference;
+            if(bttProgressCircle) {
+                bttProgressCircle.style.strokeDashoffset = offset;
+            }
+            
+            lastY=y;
+            ticking=false;
+        }
+        window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(updateNav);ticking=true}},{passive:true});
+        
+        // Mobile Menu - Fixed No Shake
+        menuToggle.addEventListener('click',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            this.classList.toggle('active');
+            mobileNav.classList.toggle('open');
+            if(mobileNav.classList.contains('open')){
+                document.body.classList.add('locked');
+                document.body.style.top = `-${scrollY}px`;
+            } else {
+                document.body.classList.remove('locked');
+                document.body.style.top = '';
+                window.scrollTo(0, scrollY);
+            }
+        });
+        
+        $$('.mobile-nav a,.nav-menu a').forEach(l=>l.addEventListener('click',function(){
+            menuToggle.classList.remove('active');
+            mobileNav.classList.remove('open');
+            document.body.classList.remove('locked');
+            document.body.style.top = '';
+        }));
+        
+        // Back to Top Click
+        backToTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+        
+        // Theme Toggle
+        themeBtn.addEventListener('click',()=>{const d=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',d?'light':'dark');themeBtn.innerHTML=d?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';showToast(d?'Light Mode ☀️':'Dark Mode 🌙')});
+        
+        // YouTube
+        const fmt=n=>n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(1)+'K':n.toString();
+        function anim(el,t){const d=1800,s=performance.now();function u(n){const p=Math.min((n-s)/d,1),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.floor(t*e));if(p<1)requestAnimationFrame(u)}requestAnimationFrame(u)}
+        
+        async function fetchYT(){const st=$('#apiStatus');try{const r=await fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CONFIG.CHANNEL_ID}&key=${CONFIG.API_KEY}`),d=await r.json();if(d.items?.length){const s=d.items[0].statistics,subs=+s.subscriberCount,views=+s.viewCount,vids=+s.videoCount;anim($('#ytSubs'),subs);anim($('#ytViews'),views);anim($('#ytVideos'),vids);anim($('#statSubs'),subs);anim($('#statViews'),views);anim($('#statVideos'),vids);$('#socialYtSubs').textContent=fmt(subs);st.textContent='✅ Live Data';st.className='api-status success'}else throw 0}catch{const fb={s:1285,v:55264,d:90};anim($('#ytSubs'),fb.s);anim($('#ytViews'),fb.v);anim($('#ytVideos'),fb.d);anim($('#statSubs'),fb.s);anim($('#statViews'),fb.v);anim($('#statVideos'),fb.d);$('#socialYtSubs').textContent=fmt(fb.s);st.textContent='⚠️ Cached';st.className='api-status error'}}
+        new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){fetchYT();o.disconnect()}},{threshold:0.1}).observe($('#youtube'));
+        
+        // Toast
+        function showToast(m){const t=document.createElement('div');t.className='toast';t.innerHTML=`<i class="fas fa-check-circle"></i> ${m}`;toastContainer.appendChild(t);setTimeout(()=>{t.classList.add('hide');setTimeout(()=>t.remove(),300)},2800)}
+        
+        // Copy
+        window.copyNumber=function(n,b){navigator.clipboard.writeText(n).then(()=>{const o=b.innerHTML;b.innerHTML='<i class="fas fa-check"></i> COPIED!';b.classList.add('copied');showToast('Copied! ✅');setTimeout(()=>{b.innerHTML=o;b.classList.remove('copied')},2000)}).catch(()=>{const ta=document.createElement('textarea');ta.value=n;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);const o=b.innerHTML;b.innerHTML='<i class="fas fa-check"></i> COPIED!';b.classList.add('copied');showToast('Copied! ✅');setTimeout(()=>{b.innerHTML=o;b.classList.remove('copied')},2000)})};
+        
+        // Form
+        contactForm.addEventListener('submit',function(e){e.preventDefault();const btn=this.querySelector('.form-submit'),o=btn.innerHTML;btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> SENDING...';btn.disabled=true;setTimeout(()=>{btn.innerHTML='<i class="fas fa-check"></i> SENT!';btn.style.background='linear-gradient(135deg,#00ff88,#00cc66)';showToast('Message Sent! 🎉');setTimeout(()=>{btn.innerHTML=o;btn.style.background='';btn.disabled=false;this.reset()},2800)},1800)});
+        
+        // Smooth Scroll
+        $$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=$(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})}));
+        
+        // Active Nav
+        const sections=$$('section[id]'),navLinks=$$('.nav-menu a');
+        window.addEventListener('scroll',()=>{let c='';sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)c=s.getAttribute('id')});navLinks.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+c)l.classList.add('active')})},{passive:true});
+        
+        console.log('%c🎮 SHEIKH RIHAN V10.2 - NO SHAKE EDITION','color:#00f5ff;font-size:22px;font-weight:bold');
+    })();
+    </script>
+</body>
+</html>
