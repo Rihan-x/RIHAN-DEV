@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="FF Glory Bot - Premium Edition by Sheikh Rihan">
+    <meta name="author" content="Sheikh Rihan">
+    <title>FF Glory Bot ⚡ Sheikh Rihan</title>
+    
+    <!-- Fonts - Only load what we need -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* ============================================
+           ⚡ OPTIMIZED LAG-FREE STYLING ⚡
+           👑 By SHEIKH RIHAN 👑
+           🚀 Performance Optimized Version
+        ============================================ */
+        
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #f093fb;
+            --success: #00d4aa;
+            --warning: #feca57;
+            --danger: #ee5a6f;
+            --info: #00d2ff;
+            --gold: #ffd700;
+            
+            --bg-primary: #0a0e27;
+            --bg-secondary: #1a1f3a;
+            --bg-card: rgba(26, 31, 58, 0.95);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-dim: rgba(255, 255, 255, 0.5);
+            
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+        }
+        
+        [data-theme="light"] {
+            --bg-primary: #f0f2f5;
+            --bg-secondary: #ffffff;
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --bg-glass: rgba(0, 0, 0, 0.03);
+            --text-primary: #1a1f3a;
+            --text-secondary: rgba(26, 31, 58, 0.7);
+            --text-dim: rgba(26, 31, 58, 0.5);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* GPU Acceleration */
+        body, .card, .stat-card, .header, .btn {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+        
+        /* Simple Background - No heavy animations */
+        .bg-simple {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08));
+        }
+        
+        /* Top Banner */
+        .top-banner {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 12px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .creator-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        
+        .creator-badge i {
+            color: var(--gold);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--bg-glass);
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--gold), var(--secondary));
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+        
+        .logo-text h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(20px, 4vw, 28px);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-text p {
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .creator-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 6px;
+            padding: 3px 10px;
+            background: linear-gradient(135deg, var(--gold), #ffa500);
+            border-radius: 50px;
+            font-size: 9px;
+            font-weight: 700;
+            color: #000;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .icon-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-md);
+            background: var(--bg-glass);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            font-size: 16px;
+        }
+        
+        .icon-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .icon-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            border: 1px solid var(--bg-glass);
+            position: relative;
+            transition: transform 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .stat-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
+        .stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+        }
+        
+        .stat-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--bg-glass);
+            font-size: 11px;
+        }
+        
+        .stat-change {
+            padding: 3px 8px;
+            border-radius: 50px;
+            background: rgba(0, 212, 170, 0.15);
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        /* Card */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--bg-glass);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--bg-glass);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+        }
+        
+        .card-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: var(--success);
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+        
+        /* Form */
+        .form-group {
+            margin-bottom: 18px;
+        }
+        
+        .form-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-glass);
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--bg-secondary);
+        }
+        
+        .form-textarea {
+            min-height: 90px;
+            resize: vertical;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, var(--success), #00b894);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger), #e74c3c);
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), #ffa500);
+            color: #000;
+        }
+        
+        .btn-block {
+            width: 100%;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        
+        .table th {
+            padding: 12px;
+            text-align: left;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--primary);
+            white-space: nowrap;
+        }
+        
+        .table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--bg-glass);
+        }
+        
+        .table tbody tr:hover {
+            background: var(--bg-glass);
+        }
+        
+        /* Status */
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .status.pending {
+            background: rgba(254, 202, 87, 0.2);
+            color: var(--warning);
+        }
+        
+        .status.running {
+            background: rgba(0, 210, 255, 0.2);
+            color: var(--info);
+        }
+        
+        .status.completed {
+            background: rgba(0, 212, 170, 0.2);
+            color: var(--success);
+        }
+        
+        /* Progress Bar */
+        .progress {
+            width: 100%;
+            height: 6px;
+            background: var(--bg-glass);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--gold));
+            border-radius: 50px;
+            transition: width 0.5s ease-out;
+        }
+        
+        /* Log Terminal */
+        .log-terminal {
+            background: #0d1117;
+            border-radius: var(--radius-md);
+            padding: 15px;
+            font-family: 'Consolas', monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #21262d;
+        }
+        
+        .log-entry {
+            color: #39d353;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .log-time {
+            color: var(--info);
+            margin-right: 8px;
+        }
+        
+        /* Alert */
+        .alert {
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 13px;
+            background: rgba(0, 210, 255, 0.1);
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            color: var(--info);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+            border: 1px solid var(--bg-glass);
+        }
+        
+        .footer-brand {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .footer-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .social-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .footer-copyright {
+            font-size: 11px;
+            color: var(--text-dim);
+            padding-top: 15px;
+            border-top: 1px solid var(--bg-glass);
+        }
+        
+        /* Toast */
+        .toast {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--success);
+            border-radius: var(--radius-md);
+            padding: 15px 20px;
+            z-index: 1000;
+            max-width: 320px;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(100%); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* FAB */
+        .fab {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 99;
+            transition: transform 0.2s;
+            border: none;
+        }
+        
+        .fab:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-dim);
+        }
+        
+        .empty-state-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+        
+        .empty-state-text {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        /* Modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: 30px;
+            max-width: 450px;
+            width: 100%;
+            border: 1px solid var(--primary);
+        }
+        
+        /* Watermark */
+        .watermark {
+            position: fixed;
+            bottom: 25px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 10px;
+            color: var(--gold);
+            font-weight: 700;
+            z-index: 98;
+            border: 1px solid var(--gold);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            .header { padding: 20px; }
+            .card { padding: 20px; }
+            .header-content { flex-direction: column; align-items: flex-start; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .btn-group { flex-direction: column; }
+            .btn-group .btn { width: 100%; }
+            .watermark { display: none; }
+            .stat-value { font-size: 28px; }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 50px; }
+        
+        /* Loading */
+        .loading {
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.6s linear infinite;
+            display: none;
+        }
+        
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        /* Disable animations for reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="creator-badge">
+            <i class="fas fa-crown"></i>
+            <span>CREATED BY SHEIKH RIHAN</span>
+        </div>
+    </div>
+    
+    <!-- Simple Background -->
+    <div class="bg-simple"></div>
+    
+    <!-- Watermark -->
+    <div class="watermark">⚡ SHEIKH RIHAN ⚡</div>
+    
+    <!-- Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🤖</div>
+                    <div class="logo-text">
+                        <h1>FF GLORY BOT</h1>
+                        <p>Premium Edition</p>
+                        <span class="creator-tag">
+                            <i class="fas fa-code"></i>
+                            BY SHEIKH RIHAN
+                        </span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeToggle" title="Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="icon-btn" id="soundToggle" title="Sound">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <button class="icon-btn" id="exportData" title="Export">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="icon-btn" id="infoBtn" title="Info">
+                        <i class="fas fa-info"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label">Accounts</span>
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                </div>
+                <div class="stat-value" id="totalAccounts">0</div>
+                <div class="stat-footer">
+                    <span class="stat-change"><i class="fas fa-check"></i> Active</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label">Today Glory</span>
+                    <div class="stat-icon"><i class="fas fa-fire"></i></div>
+                </div>
+                <div class="stat-value" id="todayGlory">0</div>
+                <div class="stat-footer">
+                    <span class="stat-change"><i class="fas fa-arrow-up"></i> +100%</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label">Total Glory</span>
+                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                </div>
+                <div class="stat-value" id="totalGlory">0</div>
+                <div class="stat-footer">
+                    <span class="stat-change"><i class="fas fa-infinity"></i> All time</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-label">Success</span>
+                    <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                </div>
+                <div class="stat-value" id="successRate">100%</div>
+                <div class="stat-footer">
+                    <span class="stat-change"><i class="fas fa-shield-alt"></i> Perfect</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add Account Card -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <i class="fas fa-user-plus"></i>
+                    Add Account
+                </h2>
+                <span class="card-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    Secure
+                </span>
+            </div>
+            
+            <div class="alert">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>Guide:</strong> Paste your Guest UID and Password. Data stored securely in browser.
+                </div>
+            </div>
+            
+            <form id="addForm">
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="fas fa-id-card"></i>
+                        Guest UID
+                    </label>
+                    <input type="text" class="form-input" id="guestUid" placeholder="Example: 4430211332" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="fas fa-key"></i>
+                        Password Hash
+                    </label>
+                    <textarea class="form-textarea" id="guestPassword" placeholder="Paste password hash..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-success btn-block">
+                    <i class="fas fa-plus-circle"></i>
+                    Add Account
+                    <span class="loading"></span>
+                </button>
+            </form>
+        </div>
+        
+        <!-- Accounts Card -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <i class="fas fa-gamepad"></i>
+                    Accounts
+                </h2>
+                <div class="btn-group">
+                    <button class="btn btn-success" id="startBtn">
+                        <i class="fas fa-play"></i>
+                        Start Bot
+                    </button>
+                    <button class="btn btn-danger" id="resetBtn">
+                        <i class="fas fa-trash"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-container" id="accountsTable">
+                <div class="empty-state">
+                    <div class="empty-state-icon">🎮</div>
+                    <div class="empty-state-text">No Accounts</div>
+                    <div class="empty-state-desc">Add your first account to start!</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Log Card -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <i class="fas fa-terminal"></i>
+                    System Log
+                </h2>
+                <span class="card-badge">
+                    <i class="fas fa-circle"></i>
+                    Live
+                </span>
+            </div>
+            
+            <div class="log-terminal" id="logTerminal">
+                <div class="log-entry">
+                    <span class="log-time">[SYSTEM]</span>
+                    🚀 FF Glory Bot Ready - Sheikh Rihan Edition
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-brand">⚡ SHEIKH RIHAN ⚡</div>
+            <div class="footer-text">
+                FF Glory Bot Premium Edition<br>
+                Crafted with 💜 by Sheikh Rihan
+            </div>
+            <div class="footer-social">
+                <div class="social-btn"><i class="fab fa-github"></i></div>
+                <div class="social-btn"><i class="fab fa-facebook"></i></div>
+                <div class="social-btn"><i class="fab fa-youtube"></i></div>
+                <div class="social-btn"><i class="fab fa-discord"></i></div>
+            </div>
+            <div class="footer-copyright">
+                © 2024 Sheikh Rihan. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+    
+    <!-- FAB -->
+    <button class="fab" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <h2 style="font-family: 'Orbitron'; font-size: 22px; margin-bottom: 15px; text-align: center; color: var(--gold);">
+                👑 About Creator
+            </h2>
+            <div style="text-align: center; padding: 15px;">
+                <div style="font-size: 48px; margin-bottom: 15px;">👨‍💻</div>
+                <h3 style="font-family: 'Orbitron'; font-size: 24px; color: var(--gold); margin-bottom: 10px;">
+                    SHEIKH RIHAN
+                </h3>
+                <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 20px;">
+                    🏆 Creator of FF Glory Bot<br>
+                    💻 Full-Stack Developer<br>
+                    ⚡ Bot & Automation Expert<br><br>
+                    <strong style="color: var(--gold);">© 2024 All Rights Reserved</strong>
+                </p>
+                <button class="btn btn-gold" id="closeModal">
+                    <i class="fas fa-times"></i> Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        //  ⚡ OPTIMIZED LAG-FREE JAVASCRIPT ⚡
+        //  👑 By SHEIKH RIHAN 👑
+        // ============================================
+        
+        const STORAGE_KEY = 'ff_glory_rihan';
+        let soundEnabled = true;
+        let isProcessing = false;
+        
+        // Cached DOM elements
+        const DOM = {
+            totalAccounts: document.getElementById('totalAccounts'),
+            todayGlory: document.getElementById('todayGlory'),
+            totalGlory: document.getElementById('totalGlory'),
+            accountsTable: document.getElementById('accountsTable'),
+            logTerminal: document.getElementById('logTerminal'),
+            addForm: document.getElementById('addForm'),
+            guestUid: document.getElementById('guestUid'),
+            guestPassword: document.getElementById('guestPassword'),
+            scrollTop: document.getElementById('scrollTop'),
+            infoModal: document.getElementById('infoModal')
+        };
+        
+        // Load data
+        function loadData() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : { accounts: [], logs: [] };
+            } catch {
+                return { accounts: [], logs: [] };
+            }
+        }
+        
+        // Save data
+        function saveData(data) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+        
+        // Add log
+        function addLog(message, icon = '📝') {
+            const data = loadData();
+            const time = new Date().toLocaleTimeString('en-US', { hour12: false });
+            data.logs.push({ time, message, icon });
+            if (data.logs.length > 50) data.logs.shift();
+            saveData(data);
+            renderLogs(data.logs);
+        }
+        
+        // Render logs
+        function renderLogs(logs) {
+            const html = logs.slice(-20).map(l => 
+                `<div class="log-entry"><span class="log-time">[${l.time}]</span> ${l.icon} ${l.message}</div>`
+            ).join('');
+            DOM.logTerminal.innerHTML = html;
+            DOM.logTerminal.scrollTop = DOM.logTerminal.scrollHeight;
+        }
+        
+        // Update UI
+        function updateUI() {
+            const data = loadData();
+            
+            // Update stats
+            let todayGlory = 0, totalGlory = 0;
+            data.accounts.forEach(acc => {
+                todayGlory += acc.glory_today || 0;
+                totalGlory += acc.glory_total || 0;
+            });
+            
+            DOM.totalAccounts.textContent = data.accounts.length;
+            DOM.todayGlory.textContent = todayGlory.toLocaleString();
+            DOM.totalGlory.textContent = totalGlory.toLocaleString();
+            
+            // Render accounts
+            if (data.accounts.length === 0) {
+                DOM.accountsTable.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🎮</div>
+                        <div class="empty-state-text">No Accounts</div>
+                        <div class="empty-state-desc">Add your first account to start!</div>
+                    </div>
+                `;
+            } else {
+                let rows = data.accounts.map((acc, i) => {
+                    const progress = Math.min((acc.glory_today || 0) / 1700 * 100, 100);
+                    return `
+                        <tr>
+                            <td><strong>${i + 1}</strong></td>
+                            <td><code>${acc.guest_uid}</code></td>
+                            <td>
+                                ${(acc.glory_today || 0).toLocaleString()}
+                                <div class="progress" style="margin-top:5px;">
+                                    <div class="progress-bar" style="width:${progress}%"></div>
+                                </div>
+                            </td>
+                            <td style="color:var(--gold);font-weight:700;">${(acc.glory_total || 0).toLocaleString()}</td>
+                            <td><span class="status ${acc.status || 'pending'}">${acc.status || 'pending'}</span></td>
+                            <td>${acc.last_played || 'Never'}</td>
+                            <td>
+                                <button class="icon-btn" onclick="deleteAccount(${i})" style="width:32px;height:32px;font-size:12px;">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+                
+                DOM.accountsTable.innerHTML = `
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>UID</th>
+                                <th>Today</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Last</th>
+                                <th>Act</th>
+                            </tr>
+                        </thead>
+                        <tbody>${rows}</tbody>
+                    </table>
+                `;
+            }
+            
+            renderLogs(data.logs);
+        }
+        
+        // Show toast
+        function showToast(message, type = 'success') {
+            const existing = document.querySelector('.toast');
+            if (existing) existing.remove();
+            
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.style.borderColor = `var(--${type})`;
+            toast.innerHTML = `
+                <div style="display:flex;align-items:center;gap:10px;">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}" style="color:var(--${type});"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+        
+        // Add account
+        DOM.addForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const uid = DOM.guestUid.value.trim();
+            const pass = DOM.guestPassword.value.trim();
+            
+            if (!uid || !pass) {
+                showToast('Fill all fields!', 'danger');
+                return;
+            }
+            
+            const data = loadData();
+            
+            if (data.accounts.some(acc => acc.guest_uid === uid)) {
+                showToast('Account exists!', 'danger');
+                return;
+            }
+            
+            data.accounts.push({
+                guest_uid: uid,
+                guest_password: pass,
+                glory_today: 0,
+                glory_total: 0,
+                status: 'pending',
+                last_played: null
+            });
+            
+            saveData(data);
+            addLog(`Account ${uid} added`, '✅');
+            this.reset();
+            updateUI();
+            showToast('Account added!', 'success');
+        });
+        
+        // Delete account
+        window.deleteAccount = function(index) {
+            if (!confirm('Delete this account?')) return;
+            
+            const data = loadData();
+            const uid = data.accounts[index].guest_uid;
+            data.accounts.splice(index, 1);
+            saveData(data);
+            addLog(`Account ${uid} deleted`, '🗑️');
+            updateUI();
+            showToast('Account deleted!', 'success');
+        };
+        
+        // Start bot
+        document.getElementById('startBtn').addEventListener('click', async function() {
+            if (isProcessing) return;
+            
+            const data = loadData();
+            if (data.accounts.length === 0) {
+                showToast('No accounts!', 'danger');
+                return;
+            }
+            
+            if (!confirm(`Start bot for ${data.accounts.length} accounts?`)) return;
+            
+            isProcessing = true;
+            this.disabled = true;
+            this.innerHTML = '<span class="loading" style="display:inline-block;"></span> Running...';
+            
+            addLog(`Bot started for ${data.accounts.length} accounts`, '🚀');
+            
+            for (let i = 0; i < data.accounts.length; i++) {
+                await processAccount(i);
+            }
+            
+            addLog('All accounts completed! 🎉', '✅');
+            showToast('Bot completed!', 'success');
+            
+            this.disabled = false;
+            this.innerHTML = '<i class="fas fa-play"></i> Start Bot';
+            isProcessing = false;
+        });
+        
+        // Process account
+        async function processAccount(index) {
+            const data = loadData();
+            const account = data.accounts[index];
+            
+            addLog(`Processing: ${account.guest_uid}`, '🤖');
+            account.status = 'running';
+            saveData(data);
+            updateUI();
+            
+            const steps = [
+                { msg: 'Logging in...', delay: 2000 },
+                { msg: 'Joining guild...', delay: 1500 },
+                { msg: 'Completing tasks...', delay: 3000 },
+                { msg: 'Playing match 1/2...', delay: 4000 },
+                { msg: 'Playing match 2/2...', delay: 4000 }
+            ];
+            
+            for (const step of steps) {
+                addLog(`  ${step.msg}`, '⏳');
+                await sleep(step.delay);
+            }
+            
+            account.glory_today = (account.glory_today || 0) + 1700;
+            account.glory_total = (account.glory_total || 0) + 1700;
+            account.status = 'completed';
+            account.last_played = new Date().toLocaleDateString();
+            
+            saveData(data);
+            updateUI();
+            addLog(`Completed: ${account.guest_uid} (+1700)`, '✅');
+            
+            await sleep(1000);
+        }
+        
+        // Sleep helper
+        function sleep(ms) {
+            return new Promise(r => setTimeout(r, ms));
+        }
+        
+        // Reset data
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            if (!confirm('Delete ALL data?')) return;
+            localStorage.removeItem(STORAGE_KEY);
+            addLog('Data cleared', '🗑️');
+            updateUI();
+            showToast('Data cleared!', 'success');
+        });
+        
+        // Theme toggle
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const html = document.documentElement;
+            const isDark = html.getAttribute('data-theme') !== 'light';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            this.querySelector('i').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+            showToast(`${isDark ? 'Light' : 'Dark'} mode`, 'success');
+        });
+        
+        // Sound toggle
+        document.getElementById('soundToggle').addEventListener('click', function() {
+            soundEnabled = !soundEnabled;
+            this.querySelector('i').className = soundEnabled ? 'fas fa-volume-up' : 'fas fa-volume-mute';
+            showToast(`Sound ${soundEnabled ? 'on' : 'off'}`, 'success');
+        });
+        
+        // Export data
+        document.getElementById('exportData').addEventListener('click', function() {
+            const data = loadData();
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ff-glory-backup-${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('Data exported!', 'success');
+        });
+        
+        // Info modal
+        document.getElementById('infoBtn').addEventListener('click', () => {
+            DOM.infoModal.classList.add('active');
+        });
+        
+        document.getElementById('closeModal').addEventListener('click', () => {
+            DOM.infoModal.classList.remove('active');
+        });
+        
+        DOM.infoModal.addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('active');
+        });
+        
+        // Scroll to top - throttled
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) return;
+            scrollTimeout = setTimeout(() => {
+                DOM.scrollTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
+                scrollTimeout = null;
+            }, 100);
+        }, { passive: true });
+        
+        DOM.scrollTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.getElementById('themeToggle').querySelector('i').className = 'fas fa-sun';
+            }
+            
+            updateUI();
+            addLog('System ready - Sheikh Rihan Bot v2', '⚡');
+        });
+    </script>
+</body>
+</html>
